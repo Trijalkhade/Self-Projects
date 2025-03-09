@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote - e-Voting System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1000px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .vote-options {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .candidate {
+      width: 30%;
+      min-width: 250px;
+      background-color: #fafafa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .candidate img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .candidate input,
+    .candidate textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 1em;
+    }
+
+    .candidate input[type="file"] {
+      padding: 5px;
+      border: 1px solid #ddd;
+    }
+
+    .candidate label {
+      font-size: 1.1em;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Enter Candidate Details</h1>
+
+    <div class="vote-options">
+      <!-- Candidate 1 -->
+      <div class="candidate">
+        <label for="candidate1-name">Candidate Name:</label>
+        <input type="text" id="candidate1-name" placeholder="Enter Candidate 1 Name">
+        
+        <label for="candidate1-photo">Candidate Photo:</label>
+        <input type="file" id="candidate1-photo">
+        
+        <label for="candidate1-symbol">Party Symbol:</label>
+        <input type="file" id="candidate1-symbol">
+      </div>
+
+      <!-- Candidate 2 -->
+      <div class="candidate">
+        <label for="candidate2-name">Candidate Name:</label>
+        <input type="text" id="candidate2-name" placeholder="Enter Candidate 2 Name">
+        
+        <label for="candidate2-photo">Candidate Photo:</label>
+        <input type="file" id="candidate2-photo">
+        
+        <label for="candidate2-symbol">Party Symbol:</label>
+        <input type="file" id="candidate2-symbol">
+      </div>
+
+      <!-- Candidate 3 -->
+      <div class="candidate">
+        <label for="candidate3-name">Candidate Name:</label>
+        <input type="text" id="candidate3-name" placeholder="Enter Candidate 3 Name">
+        
+        <label for="candidate3-photo">Candidate Photo:</label>
+        <input type="file" id="candidate3-photo">
+        
+        <label for="candidate3-symbol">Party Symbol:</label>
+        <input type="file" id="candidate3-symbol">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

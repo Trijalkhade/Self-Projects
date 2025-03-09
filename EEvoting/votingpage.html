@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote - e-Voting System</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .vote-options {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+    }
+    .vote-btn {
+      padding: 15px 30px;
+      background-color: #4CAF50;
+      color: rgb(7, 0, 0);
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .vote-btn:hover {
+      background-color: #00ff08;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="vote-options">
+    <h1>Vote for your candidate</h1>
+    <div>
+    <button class="vote-btn" onclick="window.location.href='voteconfirmationpage1.html'">Candidate 1</button>
+  </div>
+  <div>
+    <button class="vote-btn" onclick="window.location.href='voteconfirmationpage2.html'">Candidate 2</button>
+  </div>
+  <div>
+    <button class="vote-btn" onclick="window.location.href='voteconfirmationpage3.html'">Candidate 3</button>
+  </div>
+  <div>
+    <button class="vote-btn" onclick="window.location.href='voteconfirmationpage4.html'">NOTA</button>
+  </div>
+  </div>
+
+</body>
+</html>

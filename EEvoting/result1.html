@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .vote-options {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .vote-button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .vote-button:hover {
+      background-color: #45a049;
+    }
+
+    .results {
+      text-align: left;
+      font-size: 1.2em;
+    }
+
+    .results div {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Vote for your favorite option</h1>
+    <div class="vote-options">
+      <button class="vote-button" onclick="vote('Option 1')">Option 1</button>
+      <button class="vote-button" onclick="vote('Option 2')">Option 2</button>
+      <button class="vote-button" onclick="vote('Option 3')">Option 3</button>
+      <button class="vote-button" onclick="vote('Option 4')">Option 4</button>
+    </div>
+
+    <h2>Current Results:</h2>
+    <div class="results">
+      <div id="option1">Option 1: 0 votes</div>
+      <div id="option2">Option 2: 0 votes</div>
+      <div id="option3">Option 3: 0 votes</div>
+      <div id="option4">Option 4: 0 votes</div>
+    </div>
+  </div>
+
+  <script>
+    // Initialize vote counts
+    let votes = {
+      'Option 1': 0,
+      'Option 2': 0,
+      'Option 3': 0,
+      'Option 4': 0,
+    };
+
+    // Function to handle the voting action
+    function vote(option) {
+      // Increment the vote count for the selected option
+      votes[option]++;
+      
+      // Update the results dynamically on the page
+      updateResults();
+    }
+
+    // Function to update the results on the page
+    function updateResults() {
+      // Display updated vote counts for each option
+      document.getElementById('option1').innerText = `Option 1: ${votes['Option 1']} votes`;
+      document.getElementById('option2').innerText = `Option 2: ${votes['Option 2']} votes`;
+      document.getElementById('option3').innerText = `Option 3: ${votes['Option 3']} votes`;
+      document.getElementById('option4').innerText = `Option 4: ${votes['Option 4']} votes`;
+    }
+  </script>
+</body>
+</html>
